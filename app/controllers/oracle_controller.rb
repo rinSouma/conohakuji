@@ -1,0 +1,2 @@
+class OracleController < ApplicationController
+end

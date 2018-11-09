@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>このはくじ</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<div class="main_contents">
+    	<%= yield %>
+    </div>
+    <div class="footer">
+    	<div class="link">
+    		<%= link_to "このはくじについて", about_index_path, class:'about_link' %>
+    	</div>
+    	<div class="developer">
+			<p>このはくじ © 2018 <a href="https://twitter.com/rin_souma" target="_blank">@rin_souma</a></p>
+    	</div>
+    </div>
+  </body>
+</html>
