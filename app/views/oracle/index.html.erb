@@ -1,0 +1,16 @@
+<div class="title">
+	このはくじ
+</div>
+<div class="top_img_box">
+	<%= image_tag @img_name, class: 'top_img' %>
+</div>
+<div class="submit_box">
+	<% url = "https://twitter.com/intent/tweet?url=" << root_url(only_path: false) << "?key=" << @md5 \
+	<< "&text=" << @md5 \
+	<< "&hashtags=このはくじ"%>
+	<%= link_to "結果をツイートする", url , class:'tweet_link link_button link', target:'_blank' %>
+</div>
+
+<div class="return_box">
+	<%= link_to "戻る", home_index_path , class:'return_link link_button link' %>
+</div>

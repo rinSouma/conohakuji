@@ -3,6 +3,17 @@
   <head>
     <title>このはくじ</title>
     <%= csrf_meta_tags %>
+	<meta name="twitter:card" content="summary_large_image" /> 
+	<meta name="twitter:site" content="@rin_souma" /> 
+	<meta property="og:url" content="https://smrin.net/konohakuji" /> 
+	<meta property="og:title" content="このはくじ" /> 
+	<% if @img_name %>
+		<meta property="og:description" content="<%= @description_msg %>" /> 
+		<meta property="og:image" content="<%= asset_url(@img_name) %>" />
+	<% else %> 
+		<meta property="og:description" content="<%= @description_msg %>" /> 
+		<meta property="og:image" content="<%= asset_url('top_img.png') %>" />
+	<% end if %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -14,10 +25,10 @@
     </div>
     <div class="footer">
     	<div class="link">
-    		<%= link_to "このはくじについて", about_index_path, class:'about_link' %>
+    		<%= link_to "このはくじについて", about_index_path, class:'about_link link' %>
     	</div>
     	<div class="developer">
-			<p>このはくじ © 2018 <a href="https://twitter.com/rin_souma" target="_blank">@rin_souma</a></p>
+			<p>このはくじ © 2018 <a href="https://twitter.com/rin_souma" target="_blank" class="link">@rin_souma</a></p>
     	</div>
     </div>
   </body>
