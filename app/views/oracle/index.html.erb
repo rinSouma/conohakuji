@@ -5,8 +5,8 @@
 	<%= image_tag @img_name, class: 'top_img' %>
 </div>
 <div class="submit_box">
-	<% url = "https://twitter.com/intent/tweet?url=" << root_url(only_path: false) << "?key=" << @md5 \
-	<< "&text=" << @md5 \
+	<% url = "https://twitter.com/intent/tweet?url=" << root_url(only_path: false) << @rnd.to_s \
+	<< "&text=" << @rnd.to_s \
 	<< "&hashtags=このはくじ"%>
 	<%= link_to "結果をツイートする", url , class:'tweet_link link_button link', target:'_blank' %>
 </div>
