@@ -1,10 +1,9 @@
 require "digest/md5"
 class HomeController < ApplicationController
   def index
-    if params[:key] then
-      rnd = params[:key].slice(0, 3).hex % $IMG_LIST.length
-      @img_name = $IMG_LIST[rnd]
-      @description_msg = $DES_LIST[rnd]
+    if params[:id] then
+      @img_name = $IMG_LIST[params[:id].to_i]
+      @description_msg = $DES_LIST[params[:id].to_i]
     end
   end
 end
