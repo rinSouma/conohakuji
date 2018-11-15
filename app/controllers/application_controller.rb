@@ -9,4 +9,5 @@ class ApplicationController < ActionController::Base
   $DES_LIST = {0 => "大吉", 1 => "中吉", 2 => "小吉", 3=> "吉" \
              , 4 => "半吉", 5 => "末吉", 6 => "末小吉", 7 => "凶" \
              , 8 => "小凶", 9 => "半凶", 10 => "末凶", 11 => "大凶" }
+
 end

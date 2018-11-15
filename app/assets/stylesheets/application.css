@@ -8,6 +8,11 @@
 	margin-top:40px;
 	font-size:48px;
 }
+.description{
+	font-size:20px;
+	margin-bottom:20px;
+	
+}
 .link{
 	color: rgb(255,255,255);
 }
@@ -61,4 +66,10 @@
 
 .developer{
 	font-size:12px;
+}
+
+.top_img{
+	max-width:1000px;
+	width:90%;
+	margin-bottom:20px;
 }

@@ -1,12 +1,13 @@
-<div class="title">
-	このはくじ
+<div class="description">
+	今日の運勢は・・・
 </div>
+
 <div class="top_img_box">
-	<%= image_tag @img_name, class: 'top_img' %>
+	<%= image_tag @img_name, class: 'top_img', alt: @description_msg %>
 </div>
 <div class="submit_box">
 	<% url = "https://twitter.com/intent/tweet?url=" << root_url(only_path: false) << @rnd.to_s \
-	<< "&text=" << @rnd.to_s \
+	<< "&text=" << "このはくじを引いたよ。今日の運勢は" << @description_msg << "%0a" \
 	<< "&hashtags=このはくじ"%>
 	<%= link_to "結果をツイートする", url , class:'tweet_link link_button link', target:'_blank' %>
 </div>
